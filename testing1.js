@@ -1,3 +1,7 @@
+const btn = document.querySelector('.button');
+const output = document.querySelector('.output');
+let ctr = 0;
+
 const body = document.querySelector("body"),
       modeToggle = body.querySelector(".mode-toggle");
       sidebar = body.querySelector("nav");
@@ -54,3 +58,49 @@ sidebarToggle.addEventListener("click", () => {
      var limit = /[^0-5]/g;
      input.value = input.value.replace(limit,"");
  }
+ 
+
+
+
+fetch('https://create-eagleeye.herokuapp.com/login', {
+        method: 'POST',
+        headers: {
+            'accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'grant_type=&username=Joshua@gmail.com&password=passkey&scope=&client_id=&client_secret='
+    }).then(res => {
+        return res.json();
+    }).then(json => {
+        console.log(json['access_token']);
+
+        fetch('https://create-eagleeye.herokuapp.com/posts/', {
+            method: 'GET',
+            headers: {
+                'accept': 'application/json',
+                'Authorization': 'Bearer ' + json['access_token']
+            }
+        }).then(res => {
+            return res.json();
+        }).then(json => {
+            console.log(json);
+            outjson(json);
+        });
+    });
+
+function outjson(val){
+    console.log(val);
+    let html = '';
+    val.forEach((ele,ind) => {
+        console.log(ele);
+        html += `<div>${ind+1}. ${ele.title} ${ele.content} (${ele.id}) </div>`;
+    })
+    html += `<small>${JSON.stringify(val)}</small>`;
+    output.innerHTML = html;
+}
+
+btn.onclick = () => {
+    output.innerHTML = 'Connecting...'
+    getData();
+
+}
