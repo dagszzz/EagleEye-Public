@@ -11,6 +11,7 @@
      
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <title>Admin Dashboard Panel</title> 
 </head>
@@ -35,18 +36,12 @@
                     </a>
                 </li>
                 
-                    <li>
-                    <a href="request.html">
-                        <i class="uil uil-bell"></i>
-                        <span class="link-name">Request</span>
-                    </a>
-                </li>
                 
-                
+
                 <li>
                     <a href="taskguard.html">
                         <i class="uil uil-schedule"></i>
-                        <span class="link-name">Task Guard</span>
+                        <span class="link-name">Manage</span>
                     </a>
                 </li>
                 
@@ -115,7 +110,7 @@
                     </div>
                     <div class="box box2">
                         <i class="uil uil-comments"></i>
-                        <span class="text">Active Services</span>
+                        <span class="text">In Progress</span>
                         <span class="number">0</span>
                     </div>
                     <div class="box box3">
@@ -126,184 +121,9 @@
                 </div>
             </div>
 
-            <div class="activity">
-                <div class="title">
-                    <i class="uil uil-clock-three"></i>
-                    <span class="text">Recent Job Posts</span>
-                </div>
-
-                <div class="activity-data">
-                    <div class="data names">
-                        <span class="data-title">Name</span>
-                        <span class="data-list">Ronald Christian Fausto III</span>
-                        <span class="data-list">Ronald Christian Fausto III</span>
-                        <span class="data-list">Ronald Christian Fausto III</span>
-                        <span class="data-list">Ronald Christian Fausto III</span>
-
-                        
-
-                    </div>
-                    <div class="data email">
-                        <span class="data-title">PLM Email</span>
-                        <span class="data-list">rcicfausto2018@plm.edu.ph</span>
-                        <span class="data-list">rcicfausto2018@plm.edu.ph</span>
-                        <span class="data-list">rcicfausto2018@plm.edu.ph</span>
-                        <span class="data-list">rcicfausto2018@plm.edu.ph</span>
-                        
-                    </div>
-                    
-                    <div class="data joined">
-                        <span class="data-title">Year Level</span>
-                        <span class="data-list">4</span>
-                        <span class="data-list">4</span>
-                        <span class="data-list">4</span>
-                        <span class="data-list">4</span>
-                    </div>
-
-                    <div class="data status">
-                        <span class="data-title">Course</span>
-                        <span class="data-list">BS CS</span>
-                        <span class="data-list">BS CS</span>
-                        <span class="data-list">BS CS</span>
-                        <span class="data-list">BS CS</span>
-                        
-                    </div>
-
-                    <div class="data type">
-                        <span class="data-title">Type of Job</span>
-                        <span class="data-list">Paper</span>
-                        <span class="data-list">Assist</span>
-                        <span class="data-list">Tutor</span>
-                        <span class="data-list">Model</span>
-                        
-
-                    </div>
-                    <div class="data type">
-                        <span class="data-title">Status</span>
-                        <span class="buttons">
-                            <span class="data-list">
-                            <button type="button" class="button" onclick="window.location.href='jobview.html' ">View</button>   
-                            </span>
-                            </span>
-                            
-                            <span class="buttons">
-                            <span class="data-list">
-                            <button type="button" class="button" onclick="window.location.href='jobview.html' ">View</button>   
-                            </span>
-                            </span>
-    
-                            <span class="buttons">
-                            <span class="data-list">
-                            <button type="button" class="button" onclick="window.location.href='jobview.html' ">View</button>   
-                            </span>
-                            </span>
-    
-                            <span class="buttons">
-                            <span class="data-list">
-                            <button type="button" class="button" onclick="window.location.href='jobview.html' ">View</button>   
-                            </span>
-                            </span>
-                        
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </section>
-    <section class="dashboard">
-        
-
-        <div class="dash-content">
-            <div class="overview">
-                <div class="title">
-                </div>
-
-
-
-                <div class="activity">
-                    <div class="title">
-                        <i class="uil uil-clock-three"></i>
-                        <span class="text">Recent Service Posts</span>
-                    </div>
-    
-                    <div class="activity-data">
-                        <div class="data names">
-                            <span class="data-title">Name</span>
-                            <span class="data-list">Ronald Christian Fausto III</span>
-                            <span class="data-list">Ronald Christian Fausto III</span>
-                            <span class="data-list">Ronald Christian Fausto III</span>
-                            <span class="data-list">Ronald Christian Fausto III</span>
-    
-                            
-    
-                        </div>
-                        <div class="data email">
-                            <span class="data-title">PLM Email</span>
-                            <span class="data-list">rcicfausto2018@plm.edu.ph</span>
-                            <span class="data-list">rcicfausto2018@plm.edu.ph</span>
-                            <span class="data-list">rcicfausto2018@plm.edu.ph</span>
-                            <span class="data-list">rcicfausto2018@plm.edu.ph</span>
-                            
-                        </div>
-                        
-                        <div class="data joined">
-                            <span class="data-title">Year Level</span>
-                            <span class="data-list">4</span>
-                            <span class="data-list">4</span>
-                            <span class="data-list">4</span>
-                            <span class="data-list">4</span>
-                        </div>
-    
-                        <div class="data status">
-                            <span class="data-title">Course</span>
-                            <span class="data-list">BS CS</span>
-                            <span class="data-list">BS CS</span>
-                            <span class="data-list">BS CS</span>
-                            <span class="data-list">BS CS</span>
-                            
-                        </div>
-    
-                        <div class="data type">
-                            <span class="data-title">Type of Job</span>
-                            <span class="data-list">Paper</span>
-                            <span class="data-list">Assist</span>
-                            <span class="data-list">Tutor</span>
-                            <span class="data-list">Model</span>
-                            
-    
-                        </div>
-                        <div class="data type">
-                            <span class="data-title">Status</span>
-                                <span class="buttons">
-                                <span class="data-list"></span>
-                                <button type="button" class="button" onclick="window.location.href='serviceview.html' ">View </button>   
-                                </span>
-                                </span>
-                                
-                                <span class="buttons">
-                                <span class="data-list"></span>
-                                <button type="button" class="button" onclick="window.location.href='serviceview.html' ">View </button>   
-                                </span>
-                                </span>
-        
-                                <span class="buttons">
-                                <span class="data-list"></span>
-                                <button type="button" class="button" onclick="window.location.href='serviceview.html' ">View </button>   
-                                </span>
-                                </span>
-        
-                                <span class="buttons">
-                                <span class="data-list"></span>
-                                <button type="button" class="button" onclick="window.location.href='serviceview.html' ">View </button>   
-                                </span>
-                                </span>
-                            
-                            
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </section>
-
     <script src="testing1.js"></script>
 </body>
 </html>

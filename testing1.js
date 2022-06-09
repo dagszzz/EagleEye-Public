@@ -1,5 +1,5 @@
-const btn = document.querySelector('.button');
-const output = document.querySelector('.output');
+//const btn = document.querySelector('.button');
+const output = document.querySelector('.activity-data');
 let ctr = 0;
 
 const body = document.querySelector("body"),
@@ -93,7 +93,7 @@ function outjson(val){
     let html = '';
     val.forEach((ele,ind) => {
         console.log(ele);
-        html += `<div>${ind+1}. ${ele.title} ${ele.content} (${ele.id}) </div>`;
+        html += `<div class="activity-data"><div class="data names"><span class="data-title">${ind+1}. ${ele.title} ${ele.content} (${ele.id})</span></div> </div>`;
     })
     html += `<small>${JSON.stringify(val)}</small>`;
     output.innerHTML = html;
@@ -104,3 +104,338 @@ btn.onclick = () => {
     getData();
 
 }
+
+
+
+const buttonAll = document.querySelector('.buttonAll');
+//const btn1 = document.querySelector('.btn1');
+//const output = document.querySelector('.activity-data');
+const url = 'jsontest.json';
+
+// All Button
+buttonAll.onclick = ()=>{
+    //output.innerHTML = 'Connecting...'
+    getDataAll();
+
+}
+
+/*btn1.onclick = ()=>{
+    output.innerHTML = ''
+
+}
+*/
+
+
+/*
+function getDataAll(){
+    fetch(url)
+    .then(rep => rep.json())
+    .then(data =>{
+        outDataAll(data.friends);
+    })
+}
+
+function outDataAll(val){
+    console.log(val);
+    let html = '';
+    val.forEach((ele,ind) => {
+        console.log(ele);
+        html += ` <div class="dash-content">
+                    <div class="activity">
+                    <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">ID</span>
+                        <span class="data-list">${ind+1}.</span> 
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">First Name</span>
+                        <span class="data-list">${ele.first}</span>
+                    </div>
+                    <div class="data joined">
+                        <span class="data-title">Last Name</span>
+                        <span class="data-list">${ele.last}</span>
+                    </div>
+                    
+                    <div class="data type">
+                        <span class="data-title">Status</span>
+
+                            <span class="buttonsView">
+                            <span class="data-list">
+                            <button type="button" class="button" onclick="window.location.href='jobview.html' ">View</button>   
+                            </span>
+                            </span>
+                            </div>
+                        
+                        
+                    </div>`;
+    })
+    html += `${JSON.stringify(val)}`;
+    //document.getElementById(nice).innerHTML = `<div class="activity-data"><div class="data names"><span class="data-title">Name</span><span class="data-list">${ind+1}. ${ele.first} ${ele.last} (${ele.id})</span> </div>`;
+    output.innerHTML = html;
+}
+
+//Button for Paper
+const buttonPaper = document.querySelector('.buttonPaper');
+buttonPaper.onclick = ()=>{
+    getDataPaper();
+
+}
+function getDataPaper(){
+    fetch(url)
+    .then(rep => rep.json())
+    .then(data =>{
+        outDataPaper(data.friends);
+    })
+}
+
+function outDataPaper(val){
+    console.log(val);
+    let html = '';
+    val.forEach((ele,ind) => {
+        console.log(ele);
+        html += ` <div class="dash-content">
+                    <div class="activity">
+                    <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">ID</span>
+                        <span class="data-list">${ind+1}.</span> 
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">First Name</span>
+                        <span class="data-list">${ele.first}</span>
+                    </div>
+                    <div class="data joined">
+                        <span class="data-title">Last Name</span>
+                        <span class="data-list">${ele.last}</span>
+                    </div>
+                    
+                    <div class="data type">
+                        <span class="data-title">Status</span>
+
+                            <span class="buttonsView">
+                            <span class="data-list">
+                            <button type="button" class="button" onclick="window.location.href='jobview.html' ">View</button>   
+                            </span>
+                            </span>
+                            </div>
+                        
+                        
+                    </div>`;
+    })
+    html += `${JSON.stringify(val)}`;
+    
+    output.innerHTML = html;
+}
+
+//Button for Model
+const buttonModel = document.querySelector('.buttonModel');
+buttonModel.onclick = ()=>{
+    getDataModel();
+
+}
+function getDataModel(){
+    fetch(url)
+    .then(rep => rep.json())
+    .then(data =>{
+        outDataModel(data.friends);
+    })
+}
+
+function outDataModel(val){
+    console.log(val);
+    let html = '';
+    val.forEach((ele,ind) => {
+        console.log(ele);
+        html += ` <div class="dash-content">
+                    <div class="activity">
+                    <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">ID</span>
+                        <span class="data-list">${ind+1}.</span> 
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">First Name</span>
+                        <span class="data-list">${ele.first}</span>
+                    </div>
+                    <div class="data joined">
+                        <span class="data-title">Last Name</span>
+                        <span class="data-list">${ele.last}</span>
+                    </div>
+                    
+                    <div class="data type">
+                        <span class="data-title">Status</span>
+
+                            <span class="buttonsView">
+                            <span class="data-list">
+                            <button type="button" class="button" onclick="window.location.href='jobview.html' ">View</button>   
+                            </span>
+                            </span>
+                            </div>
+                        
+                        
+                    </div>`;
+    })
+    html += `${JSON.stringify(val)}`;
+    
+    output.innerHTML = html;
+}
+
+//Button for Coding
+const buttonCoding = document.querySelector('.buttonCoding');
+buttonCoding.onclick = ()=>{
+    getDataCoding();
+
+}
+function getDataCoding(){
+    fetch(url)
+    .then(rep => rep.json())
+    .then(data =>{
+        outDataCoding(data.friends);
+    })
+}
+
+function outDataCoding(val){
+    console.log(val);
+    let html = '';
+    val.forEach((ele,ind) => {
+        console.log(ele);
+        html += ` <div class="dash-content">
+                    <div class="activity">
+                    <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">ID</span>
+                        <span class="data-list">${ind+1}.</span> 
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">First Name</span>
+                        <span class="data-list">${ele.first}</span>
+                    </div>
+                    <div class="data joined">
+                        <span class="data-title">Last Name</span>
+                        <span class="data-list">${ele.last}</span>
+                    </div>
+                    
+                    <div class="data type">
+                        <span class="data-title">Status</span>
+
+                            <span class="buttonsView">
+                            <span class="data-list">
+                            <button type="button" class="button" onclick="window.location.href='jobview.html' ">View</button>   
+                            </span>
+                            </span>
+                            </div>
+                        
+                        
+                    </div>`;
+    })
+    html += `${JSON.stringify(val)}`;
+    
+    output.innerHTML = html;
+}
+
+//Button for Tutor
+const buttonTutor = document.querySelector('.buttonTutor');
+buttonTutor.onclick = ()=>{
+    getDataTutor();
+
+}
+function getDataTutor(){
+    fetch(url)
+    .then(rep => rep.json())
+    .then(data =>{
+        outDataTutor(data.friends);
+    })
+}
+
+function outDataTutor(val){
+    console.log(val);
+    let html = '';
+    val.forEach((ele,ind) => {
+        console.log(ele);
+        html += ` <div class="dash-content">
+                    <div class="activity">
+                    <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">ID</span>
+                        <span class="data-list">${ind+1}.</span> 
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">First Name</span>
+                        <span class="data-list">${ele.first}</span>
+                    </div>
+                    <div class="data joined">
+                        <span class="data-title">Last Name</span>
+                        <span class="data-list">${ele.last}</span>
+                    </div>
+                    
+                    <div class="data type">
+                        <span class="data-title">Status</span>
+
+                            <span class="buttonsView">
+                            <span class="data-list">
+                            <button type="button" class="button" onclick="window.location.href='jobview.html' ">View</button>   
+                            </span>
+                            </span>
+                            </div>
+                        
+                        
+                    </div>`;
+    })
+    html += `${JSON.stringify(val)}`;
+    
+    output.innerHTML = html;
+}
+
+//Button for Assist
+const buttonAssist = document.querySelector('.buttonAssist');
+buttonAssist.onclick = ()=>{
+    getDataAssist();
+
+}
+function getDataAssist(){
+    fetch(url)
+    .then(rep => rep.json())
+    .then(data =>{
+        outDataAssist(data.friends);
+    })
+}
+
+function outDataAssist(val){
+    console.log(val);
+    let html = '';
+    val.forEach((ele,ind) => {
+        console.log(ele);
+        html += ` <div class="dash-content">
+                    <div class="activity">
+                    <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">ID</span>
+                        <span class="data-list">${ind+1}.</span> 
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">First Name</span>
+                        <span class="data-list">${ele.first}</span>
+                    </div>
+                    <div class="data joined">
+                        <span class="data-title">Last Name</span>
+                        <span class="data-list">${ele.last}</span>
+                    </div>
+                    
+                    <div class="data type">
+                        <span class="data-title">Status</span>
+
+                            <span class="buttonsView">
+                            <span class="data-list">
+                            <button type="button" class="button" onclick="window.location.href='jobview.html' ">View</button>   
+                            </span>
+                            </span>
+                            </div>
+                        
+                        
+                    </div>`;
+    })
+    html += `${JSON.stringify(val)}`;
+    
+    output.innerHTML = html;
+}
+*/

@@ -1,0 +1,29 @@
+{
+    "friends": [
+    {
+        "first" : "christian",
+        "last" : "fausto",
+        "id": "1"
+    },
+    {
+        "first": "dags",
+        "last": "fausto",
+        "id": "2"
+    },
+    {
+        "first": "ron",
+        "last": "fausto",
+        "id": "3"
+    },
+    {
+        "first": "ian",
+        "last": "fausto",
+        "id": "4"
+    },
+    {
+        "first": "chris",
+        "last": "fausto",
+        "id": "5"
+    }
+    ]
+}
