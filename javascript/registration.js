@@ -109,11 +109,11 @@ function signupId () {
   fetch('https://create-eagleeye.herokuapp.com/login', {
             method: 'POST',
             headers: {
-                    
-                Accept: "application/json, text/plain, */*",
+                body: JSON.stringify(formData), 
+                'Accept' : 'application/json',
                     'Content-Type' : 'application/json'
                 },    
-                body: JSON.stringify(formData), 
+                
             }).then((response) => response.json())
             .then((data) => {
               console.log(data);

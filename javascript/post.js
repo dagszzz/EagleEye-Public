@@ -78,7 +78,7 @@ function submit() {
             }).then(response => {
                 if (response.ok) {
                     console.log("post success");
-                    location.href = "/pages/taskguard.html"
+                    location.href = "/pages/manage.html"
                     }
                     else {
                         console.log("post failed");

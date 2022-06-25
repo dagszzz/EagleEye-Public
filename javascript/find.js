@@ -215,7 +215,7 @@ const viewId = document.querySelector('.activity');
                 window.localStorage.clear(); //clear all localstorage
                 location.href = "/pages/index.html"
             } 
-/*
+
 function searchJob(query) {
     fetch(posts_url + `${query}`,{
         method : 'GET',
@@ -235,4 +235,3 @@ window.onload = () => {
         searchJob(searchFieldElement.value);
     }
 }
-*/

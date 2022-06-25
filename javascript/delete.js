@@ -213,7 +213,7 @@ posts_url = `https://create-eagleeye.herokuapp.com/posts/`;
 
                     <span class="buttons">
                         <span class="data-list">
-                        <button type="button" class="button" onclick="window.location.href='/pages/taskguard.html' ">Back</button>
+                        <button type="button" class="button" onclick="window.location.href='/pages/manage.html' ">Back</button>
                         <button type="button" class="button" href="/pages/manage.html" onClick="updateId(${val.id})" id="update">Update</button>
                         </span>
                     </span>
